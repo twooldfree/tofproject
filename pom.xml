@@ -98,7 +98,8 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>8.1.11.v20130520</version>
         <configuration>
-          <scanIntervalSeconds>0</scanIntervalSeconds>
+          <scanIntervalSeconds>1</scanIntervalSeconds>
+          <reload>automatic</reload>
           <connectors>
             <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
               <port>7777</port>

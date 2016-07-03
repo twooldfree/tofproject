@@ -9,12 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
  * Created by wen on 2016/7/1.
  */
 @Controller
-@RequestMapping("/demo/demoAction")
+//@RequestMapping("/demo/demoAction")
 public class demoAction {
-    @RequestMapping("/test.do")
+    @RequestMapping("/demo.do")
     public ModelAndView test(){
-        System.out.println("aaaaaaaaaaa");
         ModelAndView mnv = new ModelAndView("/demo/demo.jsp");
+        System.out.println("3");
         return mnv;
     }
 }
