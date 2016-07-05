@@ -12,20 +12,22 @@
     border-bottom:  1px solid grey;
     border-top:  1px solid grey;
     border-left:  1px solid grey;
-    border-top-left-radius: 5px ;
-    border-bottom-left-radius: 5px ;
+    border-top-left-radius: 2px ;
+    border-bottom-left-radius: 2px ;
     overflow:hidden;
 }
 
 .wRightProgressBar{
     float: right;
-    /*text-align: center;*/
-    /*vertical-align: bottom ;*/
-    /*font-size: small;*/
-    /*font-weight: bold;*/
+    color: darkgrey;
+    text-align: center;
+    vertical-align: bottom ;
+    font-size: small;
+    font-weight: bold;
     border-bottom:  1px solid grey;
     border-top:  1px solid grey;
     border-right:  1px solid grey;
-    border-top-right-radius: 5px ;
-    border-bottom-right-radius: 5px ;
+    border-top-right-radius: 2px ;
+    border-bottom-right-radius: 2px ;
+    overflow:hidden;
 }

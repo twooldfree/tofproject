@@ -23,10 +23,15 @@
 <script>
   $(document).ready(function(){
     $("div").wProgressBar({
-      width:200,
-      height:50,
-      color:"red"
+//      processnum:0.3,
+      width:100,
+      height:20,
+//      color:"#32A4F7",
+      url:"${pageContext.request.contextPath}/reDraw.do",
+      isAutoRefresh:true,
+      rate:5
     });
+
   });
 </script>
 </body>
