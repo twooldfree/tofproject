@@ -19,10 +19,22 @@
 
 </head>
 <body>
-
+<%--<canvas id = "myCanvas" width="1000" style="position: absolute;z-index: 0">Canvas画线技巧</canvas>--%>
 <div></div>
 <script>
   $(document).ready(function(){
+
+//      var myCanvas = document.getElementById("myCanvas");
+//      var context = myCanvas.getContext("2d");
+//      context.strokeStyle = "rgba(0,0,0,0.5)"
+//      context.fillStyle = "black"//设置填充颜色
+//      context.moveTo(20, 30);//将画笔移到x0,y0处
+//      context.lineTo(1000, 30);//从x0,y0到x1,y1画一条线
+//      context.fill();//填充
+//      context.stroke();//画线
+//      context.beginPath() //清空子路径
+//      context.closePath() //闭合路径
+
     <%--$("div").wProgressBar({--%>
 <%--//      processnum:0.3,--%>
       <%--width:100,--%>
@@ -35,13 +47,35 @@
 
       $("div").wStep({
           radius:15,
-          stepNum:"1",//步骤编号
-          url:"",//点击步骤对应的url
-          isCur:true,//是否是当前步骤
           isShowStepInfo:true,//是否显示步骤描述 默认不显示
-          stepInfo:"",//步骤描述
-          fontColor:"blue",//文字颜色
-          circleColor:"blue"//圆圈颜色
+          fontColor:"#34A7FA",//文字颜色
+          circleColor:"#34A7FA",//圆圈颜色
+          steps:[
+              {
+                  stepNum:"1",//步骤编号
+                  stepInfo:"第一",//步骤描述
+                  url:"",//点击步骤对应的url
+                  isCur:true//是否是当前步骤
+              },
+              {
+                  stepNum:"2",//步骤编号
+                  stepInfo:"第二",//步骤描述
+                  url:"",//点击步骤对应的url
+                  isCur:false//是否是当前步骤
+              },
+              {
+                  stepNum:"3",//步骤编号
+                  stepInfo:"第三",//步骤描述
+                  url:"",//点击步骤对应的url
+                  isCur:false//是否是当前步骤
+              },
+              {
+                  stepNum:"4",//步骤编号
+                  stepInfo:"第四",//步骤描述
+                  url:"",//点击步骤对应的url
+                  isCur:false//是否是当前步骤
+              }
+          ]
       })
 
   });

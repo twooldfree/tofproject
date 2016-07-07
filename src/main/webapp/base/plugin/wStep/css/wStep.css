@@ -1,0 +1,124 @@
+/*.stepCss{*/
+    /*cursor: pointer;*/
+    /*font-family: "microsoft yahei";*/
+    /*display: -webkit-box;*/
+    /*display:-ms-inline-flexbox;*/
+    /*display: -moz-box;*/
+/*}*/
+
+/*.stepCss>div{*/
+    /*width: 200px;*/
+    /*max-width: 200px;*/
+    /*overflow: hidden;*/
+/*}*/
+
+/*.stepCss li{*/
+    /*width: 100px;*/
+    /*list-style-type:none;*/
+    /*text-align: center;*/
+    /*color: darkslategray;*/
+/*}*/
+
+/*.stepCss ul{*/
+    /*padding-left: 100px;*/
+/*}*/
+/**/
+    /*小圈*/
+/**/
+/*.stepCss .stepNode{*/
+    /*font-size: 14px;*/
+    /*font-weight:bolder;*/
+
+
+/*}*/
+/**/
+    /*步骤描述部分*/
+/**/
+/*.stepCss .stepInfo{*/
+    /*margin-top: 10px;*/
+    /*text-overflow: ellipsis;*/
+    /*font-size: 12px;*/
+    /*width: auto;*/
+    /*height: auto;*/
+    /*width: 100px;*/
+/*}*/
+
+/*.line{*/
+    /*margin:0px;*/
+    /*height:1px;*/
+    /*border:0px;*/
+    /*background-color:blue;*/
+/*}*/
+
+
+/*.myCanvas{*/
+    /*position: absolute;*/
+    /*z-index: -1;*/
+    /*padding: 0;*/
+
+/*}*/
+
+.row{
+    width: 100%;
+    min-height: 400px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    display: -webkit-box;
+    display:-ms-inline-flexbox;
+    display: -moz-box;
+
+}
+
+.row:hover{
+    -webkit-box-shadow:1px 1px 1px #000;
+    -moz-box-shadow:1px 1px 1px #000;
+}
+
+.title{
+    width:10%;
+    min-height: 100px;
+    padding:0;
+    margin: 0;
+}
+
+.content{
+    width:80%;
+    min-height: 100px;
+    padding: 10px 0 10px 50px;
+    margin: 0;
+    /*border: 1px solid darkslategray;*/
+}
+
+.stepCircle{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    text-align:center;
+    font-size: 14px;
+    font-weight: bolder;
+
+}
+
+.yLine{
+    width: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    /*background-color: gainsboro;*/
+    border-right:2px dashed #ccc;
+        /*min-height: 300px;*/
+}
+
+
+.endfont{
+    font-size: 12px;
+    /*font-weight: bolder;*/
+    color: gainsboro;
+    border: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
