@@ -13,6 +13,7 @@
 <head>
     <title>测试页面</title>
     <script src="${pageContext.request.contextPath}/base/thirdpart/jquery/jquery-3.0.0.js"></script>
+    <script src="${pageContext.request.contextPath}/base/thirdpart/jquery/jquery.mousewheel.js"></script>
     <link href="${pageContext.request.contextPath}/base/plugin/wProgressBar/css/wProgressBar.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/base/plugin/wStep/js/wStep.js"></script>
     <link href="${pageContext.request.contextPath}/base/plugin/wStep/css/wStep.css" rel="stylesheet">
@@ -46,7 +47,7 @@
     <%--});--%>
 
       $("div").wStep({
-          radius:15,
+          radius:20,
           isShowStepInfo:true,//是否显示步骤描述 默认不显示
           fontColor:"#34A7FA",//文字颜色
           circleColor:"#34A7FA",//圆圈颜色

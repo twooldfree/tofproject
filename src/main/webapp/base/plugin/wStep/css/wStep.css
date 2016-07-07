@@ -60,8 +60,8 @@
 
 .row{
     width: 100%;
-    min-height: 400px;
-    padding: 0;
+    /*min-height: 400px;*/
+    padding: 5px 0 5px 10px;
     margin: 0;
     display: inline-block;
     display: -webkit-box;
@@ -71,27 +71,28 @@
 }
 
 .row:hover{
-    -webkit-box-shadow:1px 1px 1px #000;
-    -moz-box-shadow:1px 1px 1px #000;
+    -webkit-box-shadow:5px 2px 6px #000;
+    -moz-box-shadow:5px 2px 6px #000;
+    box-shadow:5px 2px 6px #000 ;
 }
 
 .title{
     width:10%;
-    min-height: 100px;
+    /*min-height: 100px;*/
     padding:0;
     margin: 0;
 }
 
 .content{
     width:80%;
-    min-height: 100px;
+    /*min-height: 100px;*/
     padding: 10px 0 10px 50px;
     margin: 0;
     /*border: 1px solid darkslategray;*/
 }
 
 .stepCircle{
-    margin-top: 10px;
+    margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;

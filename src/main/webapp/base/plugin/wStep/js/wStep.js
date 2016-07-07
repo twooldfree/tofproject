@@ -68,64 +68,52 @@
 
                         var $yline = $("<div/>").addClass("yLine").css({
                             //"background-color":opts.circleColor,
-                            "height":$titlediv.height()-100
+                            //"height":$titlediv.height()-100
+                            "height":200
+
                         });
                         $titlediv.append($yline);//加入竖线
                         $titlediv.append($endfontdiv);//结束字样
 
-
-
-
-
-
-
-                        //var $content = $("<div><ul><li></li><li></li></ul></div>");
-                        //$i.addClass("stepNode");
-                        //$("li:first",$content).append($i);
-                        //if(opts.isShowStepInfo){//如果显示步骤描述
-                        //    var $stepInfodiv = $("<div>"+stepdatas[i].stepInfo+"</div>");
-                        //    $stepInfodiv.addClass("stepInfo").css({
-                        //        "margin-right":100-opts.radius
-                        //    });
-                        //    $("li:last",$content).append($stepInfodiv);
-                        //}else{//如果不显示，鼠标悬停提示
-                        //    $i.attr("title",stepdatas[i].stepInfo);
-                        //}
-
-
-                        //
-                        //$this.addClass("stepCss");
-                        //$this.append($content);
                     }
 
-                    ////画线
-                    //var startX,y,endX;
-                    //var $first = $(".stepNode:first",$this);
-                    //var $last = $(".stepNode:last",$this);
-                    //
-                    //
-                    //
-                    //var $canvas = $("<canvas></canvas>").width($last.position().left-$first.position().left).height($this.height())
-                    //    .addClass("myCanvas")
-                    //    .css({
-                    //        top:$first.position().top+$first.height()/2,
-                    //        left:$first.position().left+$first.width()/2
-                    //
-                    //    });
-                    //var myCanvas = $canvas.get(0);
-                    //var context = myCanvas.getContext("2d");
-                    //context.strokeStyle = "rgba(0,0,0,0.5)"
-                    //context.fillStyle = "black"//设置填充颜色
-                    //context.moveTo(0, 0);//将画笔移到x0,y0处
-                    //context.lineTo($last.position().left-$first.position().left, 0);//从x0,y0到x1,y1画一条线
-                    //context.fill();//填充
-                    //context.stroke();//画线
-                    //context.beginPath() //清空子路径
-                    //context.closePath() //闭合路径
+                    $(".stepCircle",$this).click(function(){
+                        methods._setCurStep.call($this,$(this));
+                        return false;
+                    });
 
-                    //$this.before($canvas);
+                    $this.mousewheel(function(event,delta){
+
+                        $(".row",$this).each(function(){
+                            if($(document).scrollTop()>$(this).position().top-$(this).height()/2){
+                                //$(".content,.yLine,.endfont",$(this).prev()).fadeOut();//前一个隐藏
+                                //$(".content,.yLine,.endfont",$(this).next()).fadeIn();//前一个隐藏
+                                if($(document).scrollTop() + $(window).height() >= $(document).height()){
+                                    methods._setCurStep.call($this,$(".stepCircle:last",$this));
+
+                                }else{
+                                    methods._setCurStep.call($this,$(".stepCircle",$(this)));
+                                }
+                            }
+                        });
+
+                    })
 
                 });
+            },
+            _setCurStep:function($step){
+                var opts = methods.options.call($(this)),$this = $(this);
+                $(".stepCircle" , $this).css({
+                    "color":opts.fontColor,
+                    "background-color": "white"
+                });
+
+                $step.css({
+                    "color":"white",
+                    "background-color": opts.circleColor
+                });
+
+                return $step;
             }
 
         };
