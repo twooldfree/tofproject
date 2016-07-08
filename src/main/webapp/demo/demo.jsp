@@ -21,7 +21,7 @@
 </head>
 <body>
 <%--<canvas id = "myCanvas" width="1000" style="position: absolute;z-index: 0">Canvas画线技巧</canvas>--%>
-<div></div>
+<div style="width: 80%;max-height:200px;"></div>
 <script>
   $(document).ready(function(){
 
@@ -47,7 +47,7 @@
     <%--});--%>
 
       $("div").wStep({
-          radius:20,
+          radius:14,
           isShowStepInfo:true,//是否显示步骤描述 默认不显示
           fontColor:"#34A7FA",//文字颜色
           circleColor:"#34A7FA",//圆圈颜色

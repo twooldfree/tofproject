@@ -30,6 +30,7 @@
                     var opts = $.extend(true,{}, defaults, options),$this = $(this);
                     methods.options.call($this, opts);
 
+                    $this.addClass("wStep");
 
                     var stepdatas = opts.steps
                     for(var i in stepdatas){//循环所有步骤
@@ -66,12 +67,7 @@
                         $row.append($titlediv).append($contentdiv);
                         $this.append($row);
 
-                        var $yline = $("<div/>").addClass("yLine").css({
-                            //"background-color":opts.circleColor,
-                            //"height":$titlediv.height()-100
-                            "height":200
-
-                        });
+                        var $yline = $("<div/>").addClass("yLine");
                         $titlediv.append($yline);//加入竖线
                         $titlediv.append($endfontdiv);//结束字样
 
@@ -82,18 +78,28 @@
                         return false;
                     });
 
+
+
                     $this.mousewheel(function(event,delta){
 
                         $(".row",$this).each(function(){
-                            if($(document).scrollTop()>$(this).position().top-$(this).height()/2){
-                                //$(".content,.yLine,.endfont",$(this).prev()).fadeOut();//前一个隐藏
-                                //$(".content,.yLine,.endfont",$(this).next()).fadeIn();//前一个隐藏
-                                if($(document).scrollTop() + $(window).height() >= $(document).height()){
-                                    methods._setCurStep.call($this,$(".stepCircle:last",$this));
 
-                                }else{
-                                    methods._setCurStep.call($this,$(".stepCircle",$(this)));
-                                }
+                            if($this.scrollTop()==0){
+                                methods._setCurStep.call($this,$(".stepCircle:first",$this));
+                                return;
+                            }
+
+                            if($this.scrollTop()>$(this).position().top){
+                                methods._setCurStep.call($this,$(".stepCircle",$(this)));
+                                return;
+                            }
+
+                            var scrollTop=$this.scrollTop();
+                            var scrollHeight=$(document).height();
+                            var windowHeight=$this.height();
+                            if(scrollTop+windowHeight==scrollHeight){
+                                methods._setCurStep.call($this,$(".stepCircle:last",$this));
+                                return;
                             }
                         });
 
